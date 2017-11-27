@@ -1,0 +1,66 @@
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="renderer" content="webkit">
+  	<link rel="stylesheet" href="css/app.css?v3"/>
+	<title>恭喜注册成功</title>
+</head>
+<body class="success">
+	<div class="page-wrap">
+		<div class="info">
+		    <img src="img/banner.jpg" alt="">
+		</div>
+		<div class="download">
+			<h3 class="entry-hd">立即下载信誉彩票</h3>
+			<p class="entry-con">即可免费领取随机金额彩金</p>
+			<div class="download-btn"><a href="https://yb8.me/app/mg_w5bE" id="J_weixin"><img src="img/ios-btn.png" alt="苹果版下载"></a><a href="https://yb8.me/app/mg_w5bE" class="android-btn" id="J_weixin1"><img src="img/android-btn.png" alt="安卓版下载"></a></div>
+		</div>
+		<div class="app">
+			<img src="img/app.jpg" alt="应用预览">
+			<p class="entry-con">安全专业的彩票平台<br/>玩法多，功能强，彩种全覆盖！<br/></p>
+		</div>
+		<div class="footer-bg">
+			<p class="entry-con">注：微信用户请在右上角选择“在浏览器中打开”，再选择下载应用</p>
+		</div>
+	</div>
+	<div id="weixin-tip"><p><img src="img/live_weixin.png" alt="微信打开"/><span id="close" title="关闭" class="close">×</span></p></div>
+	<script type="text/javascript">
+	var is_weixin = (function() {
+	    var ua = navigator.userAgent.toLowerCase();
+	    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	})();
+	window.onload = function(){
+		var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+		var btn = document.getElementById('J_weixin');
+		var btn1 = document.getElementById('J_weixin1');
+		var tip = document.getElementById('weixin-tip');
+		var close = document.getElementById('close');
+		if(is_weixin){
+			btn.onclick = function(e){
+				tip.style.height = winHeight + 'px';
+				tip.style.display = 'block';
+				return false;
+			}
+			btn1.onclick = function(e){
+				tip.style.height = winHeight + 'px';
+				tip.style.display = 'block';
+				return false;
+			}
+			close.onclick = function(){
+				tip.style.display = 'none';
+			}
+		}
+	}
+	
+
+	</script>
+</body>
+</html>
